@@ -1,0 +1,264 @@
+/* ==========================================================
+   sac.css — Estilos específicos da página de SAC (sac.html)
+   Segue a paleta e a tipografia já usadas em style.css
+   ========================================================== */
+
+main {
+    flex: 1;
+}
+
+/* HERO DO SAC */
+.sac-hero {
+    text-align: center;
+    padding: 80px 10% 60px 10%;
+}
+
+.sac-subtitle {
+    display: block;
+    color: #E0C58F;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.sac-hero h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #F5F0E9;
+}
+
+.sac-hero h1 span {
+    color: #E0C58F;
+}
+
+.sac-hero p {
+    max-width: 560px;
+    margin: 18px auto 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #F5F0E9;
+    opacity: 0.9;
+}
+
+/* SEÇÃO DE CONTATO / FORMULÁRIO */
+.contact-section {
+    padding: 60px 10%;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-subtitle {
+    color: #E0C58F;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #F5F0E9;
+}
+
+.contact-info p {
+    color: #F5F0E9;
+    opacity: 0.85;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-top: 12px;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E0C58F;
+    color: #112250;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.contact-option strong {
+    display: block;
+    color: #F5F0E9;
+    margin-bottom: 4px;
+}
+
+.contact-option p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* FORMULÁRIO */
+.contact-form-box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #F5F0E9;
+}
+
+.input-group label span {
+    color: #E0C58F;
+}
+
+.input-group input,
+.input-group textarea {
+    background-color: #F5F0E9;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    color: #112250;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: 2px solid #E0C58F;
+}
+
+.btn-send {
+    width: 100%;
+    background-color: #E0C58F;
+    color: #112250;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-send:hover {
+    background-color: #3C507D;
+    color: #F5F0E9;
+}
+
+#mensagem-sac {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #E0C58F;
+}
+
+/* OUTROS MEIOS DE CONTATO */
+.contact-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #F5F0E9;
+    margin: 10px 0;
+}
+
+.contact-description {
+    color: #F5F0E9;
+    opacity: 0.85;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.contact-card .contact-icon {
+    margin: 0 auto 16px auto;
+}
+
+.contact-card h3 {
+    color: #F5F0E9;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #F5F0E9;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.contact-card a {
+    color: #E0C58F;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destrava - Meus Certificados</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Rammetto+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <script src="auth.js"></script>
+    <script>Destrava.requireRole("aluno");</script>
+
+    <div class="dashboard-layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-box">D</span>
+                <span class="logo-text">Destrava</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="PaginaAluno.html" class="nav-item">
+                    <span class="nav-icon"></span> Minha Trilha
+                </a>
+                <a href="aulas.html" class="nav-item">
+                    <span class="nav-icon"></span> Minhas Aulas
+                </a>
+                <a href="certificados.html" class="nav-item active">
+                    <span class="nav-icon"></span> Meus Certificados
+                </a>
+                <a href="sac.html" class="nav-item">
+                    <span class="nav-icon"></span> Central de Ajuda
+                </a>
+            </nav>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">AL</div>
+                <div class="user-name">
+                    <h4 data-user-name>Aluno</h4>
+                    <a href="#" onclick="Destrava.logout(); return false;">Sair da conta</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="dash-header">
+                <div class="bemvindo-text">
+                    <h1>Meus Certificados</h1>
+                    <p>Acompanhe aqui os certificados liberados ao concluir cada módulo.</p>
+                </div>
+            </header>
+
+            <section class="timeline-section">
+                <h3>Certificados disponíveis</h3>
+
+                <div class="timeline-list">
+                    <div class="timeline-item locked">
+                        <div class="item-status-icon">🔒</div>
+                        <div class="item-text">
+                            <h4>Certificado — Módulo 1: Primeiros Passos no PC</h4>
+                            <p>Conclua todas as aulas deste módulo para liberar o certificado.</p>
+                            <span class="item-meta">Bloqueado — módulo em andamento</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item locked">
+                        <div class="item-status-icon">🔒</div>
+                        <div class="item-text">
+                            <h4>Certificado — Módulo 2: Internet e E-mail</h4>
+                            <p>Conclua o Módulo 1 para desbloquear este módulo.</p>
+                            <span class="item-meta">Bloqueado</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item locked">
+                        <div class="item-status-icon">🔒</div>
+                        <div class="item-text">
+                            <h4>Certificado — Módulo 3: Ferramentas de Trabalho</h4>
+                            <p>Conclua o Módulo 2 para desbloquear este módulo.</p>
+                            <span class="item-meta">Bloqueado</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <a href="sac.html" class="btn-sac" title="Atendimento SAC">?</a>
+
+    <script>Destrava.renderUserName();</script>
+</body>
+
+</html>

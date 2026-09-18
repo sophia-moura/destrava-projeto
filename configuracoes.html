@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Destrava - Configurações</title>
+
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+<script src="auth.js"></script>
+<script>Destrava.requireRole("admin");</script>
+
+<div class="dashboard-layout">
+
+<aside class="sidebar">
+
+<div class="logo">
+<span class="logo-box">D</span>
+<span class="logo-text">Destrava</span>
+</div>
+
+<nav class="sidebar-nav">
+
+<a href="Administrador.html" class="nav-item">
+🏠 Painel
+</a>
+
+<a href="usuarios.html" class="nav-item">
+👥 Usuários
+</a>
+
+<a href="conteudos.html" class="nav-item">
+📚 Conteúdos
+</a>
+
+<a href="relatorios.html" class="nav-item">
+📊 Relatórios
+</a>
+
+<a href="configuracoes.html" class="nav-item active">
+⚙️ Configurações
+</a>
+
+</nav>
+
+<div class="sidebar-user">
+
+<div class="user-avatar">AD</div>
+
+<div class="user-name">
+
+<h4>Administrador</h4>
+
+<a href="#" onclick="Destrava.logout(); return false;">
+Sair da conta
+</a>
+
+</div>
+
+</div>
+
+</aside>
+
+
+<main class="main-content">
+
+<header class="dash-header">
+
+<div class="bemvindo-text">
+
+<h1>Configurações</h1>
+
+<p>
+Gerencie as configurações da plataforma.
+</p>
+
+</div>
+
+</header>
+
+
+<section class="timeline-section">
+
+<h3>Configurações do administrador</h3>
+
+<div class="timeline-list">
+
+<div class="timeline-item current">
+
+<div class="item-text">
+
+<h4>Perfil do administrador</h4>
+
+<p>
+Consulte as informações do administrador.
+</p>
+
+<span class="item-meta">
+Administrador
+</span>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item current">
+
+<div class="item-text">
+
+<h4>Configurações da plataforma</h4>
+
+<p>
+Área destinada às configurações gerais do sistema.
+</p>
+
+<span class="item-meta">
+Configurações gerais
+</span>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item current">
+
+<div class="item-text">
+
+<h4>Segurança</h4>
+
+<p>
+Configurações relacionadas ao acesso da plataforma.
+</p>
+
+<span class="item-meta">
+Segurança
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+
+<a href="sac.html" class="btn-sac" title="Atendimento SAC">?</a>
+
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Destrava - SAC</title>
+
+    <link rel="stylesheet" href="sac.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Rammetto+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="navbar">
+
+        <a href="indexPaginaInicial.html" class="logo">
+            <span class="logo-box">D</span>
+            <span class="logo-text">Destrava</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="indexPaginaInicial.html" class="btn-login">Início</a>
+            <a href="Login.html" class="btn-login">Entrar</a>
+            <a href="Cadastro.html" class="btn-primary">Começar grátis</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- HERO DO SAC -->
+        <section class="sac-hero">
+
+            <span class="sac-subtitle">CENTRAL DE AJUDA</span>
+
+            <h1>
+                Como podemos
+                <span>ajudar?</span>
+            </h1>
+
+            <p>
+                Estamos aqui para ajudar você a aproveitar
+                melhor o Destrava.
+            </p>
+
+        </section>
+
+        <!-- FORMULÁRIO DE CONTATO -->
+        <section class="contact-section">
+
+            <div class="contact-container">
+
+                <div class="contact-info">
+
+                    <span class="contact-subtitle">
+                        PRECISA DE AJUDA?
+                    </span>
+
+                    <h2>
+                        Fale com a gente.
+                    </h2>
+
+                    <p>
+                        Não encontrou o que procurava?
+                        Envie uma mensagem e conte para nós
+                        como podemos ajudar.
+                    </p>
+
+                    <div class="contact-option">
+                        <span class="contact-icon">?</span>
+
+                        <div>
+                            <strong>Atendimento</strong>
+
+                            <p>
+                                Tire suas dúvidas através
+                                do nosso formulário.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-form-box">
+
+                    <form id="formSAC">
+
+                        <div class="input-group">
+
+                            <label for="sac-name">
+                                NOME <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="sac-name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="sac-email">
+                                E-MAIL <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="sac-email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="sac-subject">
+                                ASSUNTO <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="sac-subject"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="sac-message">
+                                MENSAGEM <span>*</span>
+                            </label>
+
+                            <textarea
+                                id="sac-message"
+                                rows="5"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button type="submit" class="btn-send">
+                            Enviar mensagem
+                        </button>
+
+
+                        <p id="mensagem-sac"></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Seção de Outros Meios de Contato -->
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <div class="contact-header">
+            <span class="contact-subtitle">OUTROS MEIOS DE CONTATO</span>
+            <h2 class="contact-title">Fale com o Destrava</h2>
+            <p class="contact-description">
+                Precisa de ajuda ou quer falar conosco? Escolha uma das formas
+                de contato abaixo.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <!-- E-mail -->
+            <div class="contact-card">
+                <div class="contact-icon">✉</div>
+
+                <h3>E-mail</h3>
+
+                <p>
+                    Envie sua dúvida e nossa equipe entrará em contato.
+                </p>
+
+                <a href="mailto:contato@destrava.com">
+                    contato@destrava.com
+                </a>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="contact-card">
+                <div class="contact-icon">☏</div>
+
+                <h3>WhatsApp</h3>
+
+                <p>
+                    Converse diretamente com nossa equipe de atendimento.
+                </p>
+
+                <a href="https://wa.me/5500000000000" target="_blank">
+                    Falar pelo WhatsApp
+                </a>
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="contact-card">
+                <div class="contact-icon">◎</div>
+
+                <h3>Redes sociais</h3>
+
+                <p>
+                    Acompanhe novidades, dicas e conteúdos do Destrava.
+                </p>
+
+                <a href="#" target="_blank">
+                    Instagram
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="indexPaginaInicial.html" class="logo">
+
+                    <span class="logo-box">D</span>
+                    <span class="logo-text">Destrava</span>
+
+                </a>
+
+                <p class="brand-desc">
+                    Informática básica gratuita e acessível
+                    de verdade para todas as idades.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links-group">
+
+                <div class="footer-col">
+
+                    <h4>Plataforma</h4>
+
+                    <a href="indexPaginaInicial.html">
+                        Início
+                    </a>
+
+                    <a href="Cadastro.html">
+                        Começar grátis
+                    </a>
+
+                    <a href="Login.html">
+                        Entrar
+                    </a>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4>Suporte</h4>
+
+                    <a href="sac.html">
+                        SAC
+                    </a>
+
+                    <a href="#">
+                        Privacidade
+                    </a>
+
+                    <a href="#">
+                        Termo de Uso
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Destrava.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOTÃO DO SAC -->
+    <a
+        href="sac.html"
+        class="btn-sac"
+        title="Atendimento SAC"
+    >
+        ?
+    </a>
+
+
+    <script src="sac.js"></script>
+
+</body>
+
+</html>

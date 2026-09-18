@@ -1,0 +1,324 @@
+/* ==========================================================
+   aulas.css — Estilos para aulas.html, iniciante.html,
+   intermediario.html e avancado.html.
+   Essas classes não tinham NENHUM estilo definido em lugar
+   nenhum do projeto; este arquivo cobre .header, .menu,
+   .conteudo-aulas, .niveis-botoes, .modulo, .aula-card etc.
+   Segue a paleta usada em style.css/dashboard.css.
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F5EDE8;
+    color: #112250;
+}
+
+/* CABEÇALHO */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    background-color: #112250;
+    padding: 20px 6%;
+}
+
+.header .logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.header .logo h1 {
+    color: #F5F0E9;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.header .logo p {
+    color: #E0C58F;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.menu a {
+    color: #F5F0E9;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    padding: 8px 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.menu a:hover {
+    opacity: 1;
+}
+
+.menu a.ativo {
+    opacity: 1;
+    border-bottom-color: #E0C58F;
+    color: #E0C58F;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo-aulas {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 6% 80px 6%;
+}
+
+/* Introdução (aulas.html) */
+.introducao-aulas {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.introducao-aulas h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #112250;
+    margin-bottom: 16px;
+}
+
+.introducao-aulas p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* Cabeçalho do nível (iniciante/intermediario/avancado) */
+.cabecalho-nivel {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.cabecalho-nivel h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #112250;
+    margin-bottom: 12px;
+}
+
+.cabecalho-nivel p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* BOTÕES DOS NÍVEIS */
+.niveis-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.botao-nivel {
+    text-decoration: none;
+    color: #112250;
+    background-color: #ffffff;
+    border: 1px solid #e2d9cf;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.botao-nivel:hover {
+    border-color: #E0C58F;
+    transform: translateY(-2px);
+}
+
+.botao-nivel.ativo {
+    background-color: #112250;
+    color: #F5F0E9;
+    border-color: #112250;
+}
+
+/* APRESENTAÇÃO DOS NÍVEIS (aulas.html) */
+.apresentacao-niveis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.nivel-info {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 16px rgba(17, 34, 80, 0.05);
+}
+
+.nivel-info h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #112250;
+}
+
+.nivel-info p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* MÓDULOS E AULAS (iniciante/intermediario/avancado) */
+.modulo {
+    margin-bottom: 50px;
+}
+
+.modulo-titulo {
+    margin-bottom: 24px;
+}
+
+.modulo-titulo h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #112250;
+    margin-bottom: 8px;
+}
+
+.modulo-titulo p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.aulas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.aula-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(17, 34, 80, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.aula-cabecalho {
+    padding: 18px 20px 10px 20px;
+}
+
+.aula-numero {
+    display: inline-block;
+    background-color: #E0C58F;
+    color: #112250;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.aula-cabecalho h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #112250;
+    line-height: 1.4;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* proporção 16:9 */
+    background-color: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.sobre-aula {
+    padding: 16px 20px 20px 20px;
+}
+
+.sobre-aula h5 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.sobre-aula p {
+    color: #475569;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* RODAPÉ */
+.footer {
+    background-color: #112250;
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 6%;
+}
+
+.footer p {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Botão flutuante do SAC (variante para fundo claro destas páginas) */
+.btn-sac {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #112250;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(17, 34, 80, 0.35);
+    transition: 0.3s;
+    z-index: 20;
+}
+
+.btn-sac:hover {
+    transform: scale(1.1);
+    background-color: #2e5fc9;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Destrava - Administrador</title>
+
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+<script src="auth.js"></script>
+<script>Destrava.requireRole("admin");</script>
+
+<div class="dashboard-layout">
+
+<aside class="sidebar">
+
+<div class="logo">
+<span class="logo-box">D</span>
+<span class="logo-text">Destrava</span>
+</div>
+
+<nav class="sidebar-nav">
+
+<a href="Administrador.html" class="nav-item active">
+🏠 Painel
+</a>
+
+<a href="usuarios.html" class="nav-item">
+👥 Usuários
+</a>
+
+<a href="conteudos.html" class="nav-item">
+📚 Conteúdos
+</a>
+
+<a href="relatorios.html" class="nav-item">
+📊 Relatórios
+</a>
+
+<a href="configuracoes.html" class="nav-item">
+⚙️ Configurações
+</a>
+
+</nav>
+
+<div class="sidebar-user">
+
+<div class="user-avatar">AD</div>
+
+<div class="user-name">
+<h4>Administrador</h4>
+
+<a href="#" onclick="Destrava.logout(); return false;">
+Sair da conta
+</a>
+</div>
+
+</div>
+
+</aside>
+
+
+<main class="main-content">
+
+<header class="dash-header">
+
+<div class="bemvindo-text">
+
+<h1>Painel do Administrador</h1>
+
+<p>
+Bem-vindo ao painel da plataforma Destrava.
+</p>
+
+</div>
+
+</header>
+
+
+<section class="timeline-section">
+
+<h3>Visão geral</h3>
+
+<div class="timeline-list">
+
+<div class="timeline-item current">
+
+<div class="item-text">
+
+<h4>Usuários cadastrados</h4>
+
+<p>
+Total de usuários cadastrados na plataforma.
+</p>
+
+<span class="item-meta">
+120 usuários
+</span>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item current">
+
+<div class="item-text">
+
+<h4>Usuários ativos</h4>
+
+<p>
+Usuários ativos atualmente.
+</p>
+
+<span class="item-meta">
+98 usuários
+</span>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item current">
+
+<div class="item-text">
+
+<h4>Conteúdos disponíveis</h4>
+
+<p>
+Conteúdos disponíveis para os alunos.
+</p>
+
+<span class="item-meta">
+15 conteúdos
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+
+<a href="sac.html" class="btn-sac" title="Atendimento SAC">?</a>
+
+</body>
+
+</html>

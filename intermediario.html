@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DESTRAVA - Intermediário</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aulas.css">
+
+</head>
+
+
+<body>
+    <script src="auth.js"></script>
+    <script>Destrava.requireRole("aluno");</script>
+
+
+    <!-- =========================================
+         CABEÇALHO
+    ========================================== -->
+
+    <header class="header">
+
+        <a href="PaginaAluno.html" class="logo">
+
+            <h1>
+                DESTRAVA
+            </h1>
+
+            <p>
+                Curso de Informática Básica
+            </p>
+
+        </a>
+
+
+        <nav class="menu">
+
+            <a href="aulas.html">
+                Aulas
+            </a>
+
+        <a href="PaginaAluno.html">
+                Painel
+            </a>
+
+            <a href="sac.html">
+                SAC
+            </a>
+
+            <a href="#" onclick="Destrava.logout(); return false;">
+                Sair
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         CONTEÚDO PRINCIPAL
+    ========================================== -->
+
+    <main class="conteudo-aulas">
+
+
+        <!-- =========================================
+             CABEÇALHO DO NÍVEL
+        ========================================== -->
+
+        <section class="cabecalho-nivel">
+
+            <h2>
+                🟡 Nível Intermediário
+            </h2>
+
+            <p>
+                Desenvolva seus conhecimentos em ferramentas
+                de produtividade, internet e segurança digital.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================================
+             BOTÕES DOS NÍVEIS
+        ========================================== -->
+
+        <section class="niveis-botoes">
+
+
+            <a href="iniciante.html"
+               class="botao-nivel">
+
+                🟢 Iniciante
+
+            </a>
+
+
+            <a href="intermediario.html"
+               class="botao-nivel ativo">
+
+                🟡 Intermediário
+
+            </a>
+
+
+            <a href="avancado.html"
+               class="botao-nivel">
+
+                🔴 Avançado
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             MÓDULO 3 — OFFICE BÁSICO
+        ========================================== -->
+
+        <section class="modulo">
+
+
+            <div class="modulo-titulo">
+
+                <h3>
+                    Módulo 3 — Office Básico
+                </h3>
+
+                <p>
+                    Aprenda a utilizar ferramentas básicas
+                    do pacote Office.
+                </p>
+
+            </div>
+
+
+
+            <div class="aulas-container">
+
+
+                <!-- =================================
+                     VÍDEO 1
+                ================================== -->
+
+                <article class="aula-card">
+
+
+                    <div class="aula-cabecalho">
+
+                        <span class="aula-numero">
+                            Aula 1
+                        </span>
+
+                        <h4>
+                            Word do zero: criando documentos
+                        </h4>
+
+                    </div>
+
+
+
+                    <div class="video-container">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/pfUnnEKSn2g"
+                            title="Word do zero: criando documentos"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+
+                    <div class="sobre-aula">
+
+                        <h5>
+                            Sobre esta aula
+                        </h5>
+
+                        <p>
+                            Aprenda a criar, formatar e salvar
+                            documentos no Word.
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- =================================
+                     VÍDEO 2
+                ================================== -->
+
+                <article class="aula-card">
+
+
+                    <div class="aula-cabecalho">
+
+                        <span class="aula-numero">
+                            Aula 2
+                        </span>
+
+                        <h4>
+                            Excel básico: planilhas e fórmulas
+                        </h4>
+
+                    </div>
+
+
+
+                    <div class="video-container">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/9QbIuIZMVUw"
+                            title="Excel básico: planilhas e fórmulas"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+
+                    <div class="sobre-aula">
+
+                        <h5>
+                            Sobre esta aula
+                        </h5>
+
+                        <p>
+                            Criando planilhas simples com soma,
+                            média e formatação.
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             MÓDULO 4 — PRODUTIVIDADE
+        ========================================== -->
+
+        <section class="modulo">
+
+
+            <div class="modulo-titulo">
+
+                <h3>
+                    Módulo 4 — Produtividade
+                </h3>
+
+                <p>
+                    Aprenda ferramentas que facilitam
+                    suas atividades do dia a dia.
+                </p>
+
+            </div>
+
+
+
+            <div class="aulas-container">
+
+
+                <!-- =================================
+                     VÍDEO 1
+                ================================== -->
+
+                <article class="aula-card">
+
+
+                    <div class="aula-cabecalho">
+
+                        <span class="aula-numero">
+                            Aula 1
+                        </span>
+
+                        <h4>
+                            Google Drive: armazenar na nuvem
+                        </h4>
+
+                    </div>
+
+
+
+                    <div class="video-container">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/zKncLGe01hg"
+                            title="Google Drive: armazenar na nuvem"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+
+                    <div class="sobre-aula">
+
+                        <h5>
+                            Sobre esta aula
+                        </h5>
+
+                        <p>
+                            Salve e compartilhe arquivos gratuitamente
+                            no Google Drive.
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- =================================
+                     VÍDEO 2
+                ================================== -->
+
+                <article class="aula-card">
+
+
+                    <div class="aula-cabecalho">
+
+                        <span class="aula-numero">
+                            Aula 2
+                        </span>
+
+                        <h4>
+                            Compras online com segurança
+                        </h4>
+
+                    </div>
+
+
+
+                    <div class="video-container">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/eZspUgfpuzY"
+                            title="Compras online com segurança"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+
+                    <div class="sobre-aula">
+
+                        <h5>
+                            Sobre esta aula
+                        </h5>
+
+                        <p>
+                            Aprenda como comprar em sites confiáveis
+                            e proteger seus dados.
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- =================================
+                     VÍDEO 3 — PDF
+                ================================== -->
+
+                <article class="aula-card">
+
+
+                    <div class="aula-cabecalho">
+
+                        <span class="aula-numero">
+                            Aula 3
+                        </span>
+
+                        <h4>
+                            Como fazer PDF
+                        </h4>
+
+                    </div>
+
+
+
+                    <div class="video-container">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/2qvO_dRIr2Y"
+                            title="Como fazer PDF"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+
+                    <div class="sobre-aula">
+
+                        <h5>
+                            Sobre esta aula
+                        </h5>
+
+                        <p>
+                            Aprenda a converter documentos
+                            para PDF.
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- =================================
+                     VÍDEO 4 — IMPRIMIR
+                ================================== -->
+
+                <article class="aula-card">
+
+
+                    <div class="aula-cabecalho">
+
+                        <span class="aula-numero">
+                            Aula 4
+                        </span>
+
+                        <h4>
+                            Imprimir documentos
+                        </h4>
+
+                    </div>
+
+
+
+                    <div class="video-container">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/z220mDB2xD4"
+                            title="Como imprimir documentos"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+
+                    <div class="sobre-aula">
+
+                        <h5>
+                            Sobre esta aula
+                        </h5>
+
+                        <p>
+                            Aprenda a configurar e imprimir
+                            seus documentos.
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             MÓDULO 5 — SEGURANÇA
+        ========================================== -->
+
+        <section class="modulo">
+
+
+            <div class="modulo-titulo">
+
+                <h3>
+                    Módulo 5 — Segurança
+                </h3>
+
+                <p>
+                    Aprenda a utilizar as redes sociais
+                    de maneira segura e consciente.
+                </p>
+
+            </div>
+
+
+
+            <div class="aulas-container">
+
+
+                <!-- =================================
+                     VÍDEO 1
+                ================================== -->
+
+                <article class="aula-card">
+
+
+                    <div class="aula-cabecalho">
+
+                        <span class="aula-numero">
+                            Aula 1
+                        </span>
+
+                        <h4>
+                            Redes sociais: uso seguro e consciente
+                        </h4>
+
+                    </div>
+
+
+
+                    <div class="video-container">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/gmki-dl-zjA"
+                            title="Redes sociais: uso seguro e consciente"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+
+                    <div class="sobre-aula">
+
+                        <h5>
+                            Sobre esta aula
+                        </h5>
+
+                        <p>
+                            Aprenda a configurar sua privacidade
+                            e evitar golpes nas redes sociais.
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         RODAPÉ
+    ========================================== -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 DESTRAVA — Curso de Informática Básica
+        </p>
+
+        <p>
+            Aprender tecnologia pode ser simples.
+        </p>
+
+    </footer>
+
+
+    <a href="sac.html" class="btn-sac" title="Atendimento SAC">?</a>
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DESTRAVA - Aulas</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aulas.css">
+
+</head>
+
+
+<body>
+    <script src="auth.js"></script>
+    <script>Destrava.requireRole("aluno");</script>
+
+
+    <!-- =========================================
+         CABEÇALHO
+    ========================================== -->
+
+    <header class="header">
+
+        <a href="PaginaAluno.html" class="logo">
+
+            <h1>
+                DESTRAVA
+            </h1>
+
+            <p>
+                Curso de Informática Básica
+            </p>
+
+        </a>
+
+
+        <nav class="menu">
+
+            <a href="aulas.html" class="ativo">
+                Aulas
+            </a>
+
+        <a href="PaginaAluno.html">
+                Painel
+            </a>
+
+            <a href="sac.html">
+                SAC
+            </a>
+
+            <a href="#" onclick="Destrava.logout(); return false;">
+                Sair
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         CONTEÚDO PRINCIPAL
+    ========================================== -->
+
+    <main class="conteudo-aulas">
+
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="introducao-aulas">
+
+            <h2>
+                Aprenda tecnologia com o DESTRAVA!
+            </h2>
+
+
+            <p>
+                Seja bem-vindo ao DESTRAVA, um curso de
+                informática básica criado para ajudar você
+                a utilizar a tecnologia de forma simples,
+                prática e segura.
+            </p>
+
+            <p>
+                Escolha o nível que mais combina com você
+                e comece a aprender.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================================
+             BOTÕES DOS NÍVEIS
+        ========================================== -->
+
+        <section class="niveis-botoes">
+
+
+            <a href="iniciante.html"
+               class="botao-nivel">
+
+                🟢 Iniciante
+
+            </a>
+
+
+
+            <a href="intermediario.html"
+               class="botao-nivel">
+
+                🟡 Intermediário
+
+            </a>
+
+
+
+            <a href="avancado.html"
+               class="botao-nivel">
+
+                🔴 Avançado
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             APRESENTAÇÃO DOS NÍVEIS
+        ========================================== -->
+
+        <section class="apresentacao-niveis">
+
+
+            <!-- INICIANTE -->
+
+            <article class="nivel-info">
+
+                <h3>
+                    🟢 Iniciante
+                </h3>
+
+                <p>
+                    Para quem está começando a utilizar
+                    o computador e quer aprender os
+                    conceitos básicos de informática,
+                    internet e e-mail.
+                </p>
+
+            </article>
+
+
+
+            <!-- INTERMEDIÁRIO -->
+
+            <article class="nivel-info">
+
+                <h3>
+                    🟡 Intermediário
+                </h3>
+
+                <p>
+                    Para quem já possui conhecimentos
+                    básicos e deseja desenvolver novas
+                    habilidades utilizando ferramentas
+                    digitais e de produtividade.
+                </p>
+
+            </article>
+
+
+
+            <!-- AVANÇADO -->
+
+            <article class="nivel-info">
+
+                <h3>
+                    🔴 Avançado
+                </h3>
+
+                <p>
+                    Para quem deseja aprofundar seus
+                    conhecimentos em tecnologia,
+                    programação, segurança digital
+                    e gestão de dados.
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         RODAPÉ
+    ========================================== -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 DESTRAVA — Curso de Informática Básica
+        </p>
+
+        <p>
+            Aprender tecnologia pode ser simples.
+        </p>
+
+    </footer>
+
+
+    <a href="sac.html" class="btn-sac" title="Atendimento SAC">?</a>
+
+</body>
+
+</html>

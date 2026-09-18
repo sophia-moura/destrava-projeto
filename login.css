@@ -1,0 +1,213 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #112250;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+.carter-one-regular {
+  font-family: "Carter One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.auth-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 480px;
+}
+
+/* Bloco */
+.auth-box {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 12px;
+    padding: 40px 32px;
+    box-shadow: 0 10px 30px rgba(11, 26, 74, 0.05); /* Sombra leve e premium */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Logotipo Centralizado no topo do bloco */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.logo-box {
+    background-color: #E0C58F;
+    color: #112250;
+    font-weight: bold;
+    padding: 7px 13px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family: 'Carter One', cursive;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #112250;
+    font-family: 'Carter One', cursive;
+}
+
+/* Títulos do Formulário */
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header h2 {
+    color: #0f172a;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Seletor de perfil (Aluno / Administrador) */
+.role-toggle {
+    display: flex;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 26px;
+}
+
+.role-tab {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.role-tab.active {
+    background-color: #112250;
+    color: #ffffff;
+}
+
+/* Elementos de Input estilo caixa limpa */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    color: #344050;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.input-group .required {
+    color: #eb7e7e;
+}
+
+.input-group input {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px;
+    color: #0f172a;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #2e5fc9;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.forgot-link {
+    color: #2e5fc9;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Botão principal */
+.btn-auth-submit {
+    width: 100%;
+    background-color: #E0C58F;
+    color: #0b1a4a;
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 16px rgba(255, 184, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.btn-auth-submit:hover {
+    background-color: #E0C58F;
+    transform: translateY(-1px);
+}
+
+.switch-form-text {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.switch-form-text a {
+    color: #2e5fc9;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.switch-form-text a:hover {
+    text-decoration: underline;
+}
+.back-link-container {
+    text-align: center;
+}
+
+.btn-back {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: #E0C58F;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destrava - Painel do Aluno</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Rammetto+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <script src="auth.js"></script>
+    <script>Destrava.requireRole("aluno");</script>
+
+    <div class="dashboard-layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-box">D</span>
+                <span class="logo-text">Destrava</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="PaginaAluno.html" class="nav-item active">
+                    <span class="nav-icon"></span> Minha Trilha
+                </a>
+                <a href="aulas.html" class="nav-item">
+                    <span class="nav-icon"></span> Minhas Aulas
+                </a>
+                <a href="certificados.html" class="nav-item">
+                    <span class="nav-icon"></span> Meus Certificados
+                </a>
+                <a href="sac.html" class="nav-item">
+                    <span class="nav-icon"></span> Central de Ajuda
+                </a>
+            </nav>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">AL</div>
+                <div class="user-name">
+                    <h4 data-user-name>Aluno</h4>
+                    <a href="#" onclick="Destrava.logout(); return false;">Sair da conta</a>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+
+            <!-- Cabeçalho -->
+            <header class="dash-header">
+                <div class="bemvindo-text">
+                    <h1>Bora estudar, João?</h1>
+                    <p>Continue de onde parou para manter o ritmo!</p>
+                </div>
+            </header>
+
+            <!-- CARD "RECENTE" -->
+            <section class="continue-card">
+
+                <div class="continue-info">
+
+                    <span class="tag-current">
+                        MÓDULO 1 • INICIANTE
+                    </span>
+
+                    <h2>Introdução ao Computador</h2>
+
+                    <p>
+                        Próxima aula:
+                        <strong>
+                            Aula 3 — Como usar o mouse e cliques
+                        </strong>
+                    </p>
+
+                    <div class="progress-wrapper">
+
+                        <div class="progress-bar-bg">
+                            <div id="progressBar" class="progress-bar-fill">
+                            </div>
+                        </div>
+
+                        <span id="progressText" class="progress-percentage">
+                            0% concluído
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button id="btnConcluir" class="btn-continue-course">
+                    Concluir Aula ✓
+                </button>
+
+            </section>
+
+            <!-- LISTAGEM DA TRILHA LINEAR -->
+            <section class="timeline-section">
+                <h3>Sua Jornada de Aprendizado</h3>
+
+                <div class="timeline-list">
+
+                    <!-- Módulo 1 (Em andamento) -->
+                    <div class="timeline-item current">
+                        <div class="item-text">
+                            <h4>Módulo 1: Primeiros Passos no PC</h4>
+                            <p>Domine o básico absoluto: ligar o aparelho, usar o mouse e entender a área de trabalho.
+                            </p>
+                            <span id="aulasAssistidas" class="item-meta">
+                                0 de 12 aulas assistidas
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Módulo 2 (Bloqueado) -->
+                    <div id="modulo2" class="timeline-item locked">
+
+                        <div class="item-status-icon">🔒</div>
+
+                        <div class="item-text">
+
+                            <h4>Módulo 2: Internet e E-mail</h4>
+
+                            <p>
+                                Aprenda a navegar em portais de notícias,
+                                fazer buscas e enviar mensagens eletrônicas.
+                            </p>
+
+                            <span id="statusModulo2" class="item-meta">
+                                Bloqueado — Conclua o módulo anterior
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Módulo 3 (Bloqueado) -->
+                    <div id="modulo3" class="timeline-item locked">
+
+                        <div class="item-status-icon">🔒</div>
+
+                        <div class="item-text">
+
+                            <h4>Módulo 3: Ferramentas de Trabalho</h4>
+
+                            <p>
+                                Escreva documentos formatados no Word
+                                e organize tabelas financeiras simples no Excel.
+                            </p>
+
+                            <span id="statusModulo3" class="item-meta">
+                                Bloqueado
+                            </span>
+
+                        </div>
+
+                    </div>
+                </div>
+    </section>
+
+    </main>
+
+    </div>
+
+    <a href="sac.html" class="btn-sac" title="Atendimento SAC">?</a>
+
+    <script src="progresso.js"></script>
+    <script>Destrava.renderUserName();</script>
+</body>
+
+</html>

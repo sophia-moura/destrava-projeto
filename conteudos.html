@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Destrava - Conteúdos</title>
+
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+<script src="auth.js"></script>
+<script>Destrava.requireRole("admin");</script>
+
+<div class="dashboard-layout">
+
+<aside class="sidebar">
+
+<div class="logo">
+<span class="logo-box">D</span>
+<span class="logo-text">Destrava</span>
+</div>
+
+<nav class="sidebar-nav">
+
+<a href="Administrador.html" class="nav-item">
+🏠 Painel
+</a>
+
+<a href="usuarios.html" class="nav-item">
+👥 Usuários
+</a>
+
+<a href="conteudos.html" class="nav-item active">
+📚 Conteúdos
+</a>
+
+<a href="relatorios.html" class="nav-item">
+📊 Relatórios
+</a>
+
+<a href="configuracoes.html" class="nav-item">
+⚙️ Configurações
+</a>
+
+</nav>
+
+<div class="sidebar-user">
+
+<div class="user-avatar">AD</div>
+
+<div class="user-name">
+
+<h4>Administrador</h4>
+
+<a href="#" onclick="Destrava.logout(); return false;">
+Sair da conta
+</a>
+
+</div>
+
+</div>
+
+</aside>
+
+
+<main class="main-content">
+
+<header class="dash-header">
+
+<div class="bemvindo-text">
+
+<h1>Conteúdos</h1>
+
+<p>
+Gerencie os conteúdos disponíveis para os alunos.
+</p>
+
+</div>
+
+</header>
+
+
+<section class="timeline-section">
+
+<h3>Módulos da plataforma</h3>
+
+<div class="timeline-list">
+
+<div class="timeline-item current">
+
+<div class="item-text">
+
+<h4>Iniciante</h4>
+
+<p>
+Conteúdos destinados aos alunos que estão começando.
+</p>
+
+<span class="item-meta">
+Módulo disponível
+</span>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item current">
+
+<div class="item-text">
+
+<h4>Intermediário</h4>
+
+<p>
+Conteúdos para alunos que já possuem conhecimentos básicos.
+</p>
+
+<span class="item-meta">
+Módulo disponível
+</span>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item current">
+
+<div class="item-text">
+
+<h4>Avançado</h4>
+
+<p>
+Conteúdos para alunos que estão avançando nos estudos.
+</p>
+
+<span class="item-meta">
+Módulo disponível
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+
+<a href="sac.html" class="btn-sac" title="Atendimento SAC">?</a>
+
+</body>
+
+</html>
