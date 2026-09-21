@@ -1,0 +1,14 @@
+{
+  "name": "destrava-projeto-main",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^30.5.2"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
+
+
+
