@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Testes Unitários - CRUD Aulas</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #f8f9fa; 
+            padding: 30px; 
+            color: #333; 
+            }
+        #titulo-trabalho {
+            margin-bottom: 25px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 15px; }
+        h2 { 
+            margin: 0 0 5px 0;
+            color: black; 
+        }
+        .resumo { 
+            font-size: 14px;
+            color: #666; 
+            margin-bottom: 20px; 
+            background: #fff; 
+            padding: 10px 15px; 
+            border-left: 4px solid #007bff; 
+            border-radius: 4px; box-shadow: 0 1px 3px black; 
+        }
+        .container-testes{ 
+            background: #fff; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 8px black; 
+            padding: 20px; 
+            border: 1px solid #eef2f5; 
+        }
+        .suite-titulo {
+            font-size: 18px;
+            font-weight: bold; 
+            margin-bottom: 20px; 
+            color: #495057; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px;
+        }
+        .teste-item {
+            padding: 12px 15px; 
+            border-radius: 6px; 
+            margin-bottom: 12px; 
+            display: flex; 
+            align-items: flex-start; 
+            flex-direction: column; 
+            background: #fafbfc; 
+            border: 1px solid #f1f3f5; 
+            transition: all 0.2s; 
+        }
+        .teste-linha-principal {
+            display: flex; 
+            align-items: center; 
+            width: 100%; 
+            justify-content: space-between; 
+        }
+        .teste-info {
+            display: flex;
+            align-items: center; 
+            gap: 12px; 
+        }
+        .badge-status {
+            font-weight: bold;
+            padding: 4px 8px; 
+            border-radius: 4px; 
+            font-size: 12px; 
+            text-transform: uppercase;
+        }
+        .status-sucesso {
+            background-color: #d4edda; 
+            color: #155724; 
+            border: 1px solid #c3e6cb; 
+        }
+        .status-falha {
+            background-color: #f8d7da; 
+            color: #721c24; 
+            border: 1px solid #f5c6cb; 
+        }
+        .teste-id {
+            font-weight: bold; 
+            color: #495057; 
+            min-width: 95px; 
+        }
+        .teste-desc {
+            color: #212529; 
+            font-size: 14px; 
+        }
+        .teste-tempo {
+            font-size: 12px; 
+            color: #95a5a6; 
+            font-family: monospace; 
+        }
+        .teste-detalhes {
+            font-size: 12px;
+            color: #6c757d; 
+            margin-top: 8px; 
+            padding-top: 8px; 
+            border-top: 1px dashed #e9ecef; 
+            width: 100%; 
+            font-family: monospace; 
+        }
+        .resultado-geral {
+            margin-top: 25px; 
+            padding: 15px; 
+            border-radius: 6px; 
+            background: #e8f4fd; 
+            color: #004085; 
+            border: 1px solid #b8daff; 
+            font-weight: bold; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 15px; 
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div id="titulo-trabalho">
+        <h2>Painel de Validação e Evidência de Testes Unitários</h2>
+    </div>
+    
+    <div class="resumo">
+        <strong>Módulo Alvo:</strong> CRUD Aulas | <strong>Framework Utilizado:</strong> Custom JS Asset Runner (Ambiente de Contingência) | <strong>Data da Execução:</strong> 20/09/2026
+    </div>
+
+    <div class="container-testes">
+        <div class="suite-titulo"> Módulo: Gerenciamento e Ciclo de Vida de Aulas</div>
+        <div id="lista-de-testes"><!-- Injeção via Script --></div>
+        <div id="resultado-final"><!-- Injeção via Script --></div>
+    </div>
+
+    <script>
+        let listaDeAulas = [];
+
+        function adicionarAula(titulo, duracao) {
+            const novaAula = { 
+                id: listaDeAulas.length + 1, titulo, duracao 
+            };
+            listaDeAulas.push(novaAula);
+            return novaAula;
+        }
+
+        function buscarAulaPorId(id) {
+            return listaDeAulas.find(aula => aula.id === id) || null;
+        }
+
+        function atualizarAula(id, novosDados) {
+            const aula = buscarAulaPorId(id);
+            if (aula) {
+                aula.titulo = novosDados.titulo;
+                aula.duracao = novosDados.duracao;
+                return aula;
+            }
+            return null;
+        }
+
+        function excluirAula(id) {
+            const indice = listaDeAulas.findIndex(aula => aula.id === id);
+            if (indice !== -1) {
+                listaDeAulas.splice(indice, 1);
+                return true;
+            }
+            return false;
+        }
+
+        // ENGINE DE RENDERIZAÇÃO E EXECUÇÃO DO CONJUNTO DE TESTES
+        const container = document.getElementById('lista-de-testes');
+        let testesPassaram = 0;
+        let totalTestes = 0;
+
+        function executarAssercao(id, descricao, validacaoFn, detalheLog) {
+            totalTestes++;
+            listaDeAulas = [];
+            
+            const t0 = performance.now();
+            let passou = false;
+            let erroMensagem = "";
+            
+            try {
+                passou = validacaoFn();
+            } catch (e) {
+                passou = false;
+                erroMensagem = e.message;
+            }
+            const t1 = performance.now();
+            const tempoDecorrido = (t1 - t0).toFixed(3);
+
+            if (passou) testesPassaram++;
+
+            // Construção do elemento visual na árvore HTML
+            const itemHTML = `
+                <div class="teste-item" style="border-left: 4px solid ${passou ? '#28a745' : '#dc3545'}">
+                    <div class="teste-linha-principal">
+                        <div class="teste-info">
+                            <span class="badge-status ${passou ? 'status-sucesso' : 'status-falha'}">${passou ? '✓ Passou' : '✕ Falhou'}</span>
+                            <span class="teste-id">${id}</span>
+                            <span class="teste-desc">${descricao}</span>
+                        </div>
+                        <span class="teste-tempo">${tempoDecorrido} ms</span>
+                    </div>
+                    <div class="teste-detalhes">
+                        <strong>Asserção Realizada:</strong> ${detalheLog} ${erroMensagem ? '<br><span style="color:#dc3545">Erro: ' + erroMensagem + '</span>' : ''}
+                    </div>
+                </div>
+            `;
+            container.innerHTML += itemHTML;
+        }
+
+        // --- DISPARO SESSÃO INDIVIDUAL DE EXECUÇÃO DOS CASOS DE TESTE ---
+        
+        // CT-CRUD-01
+        executarAssercao(
+            'CT-CRUD-01', 
+            'Deve cadastrar uma nova aula com sucesso e gerar ID incremental.', 
+            function() {
+                const res = adicionarAula("Introdução ao JavaScript", "10min");
+                return listaDeAulas.length === 1 && res.id === 1 && res.titulo === "Introdução ao JavaScript";
+            },
+            'expect(listaDeAulas.length).to.equal(1) && expect(aula.id).to.be.a("number")'
+        );
+
+        // CT-CRUD-02: Read
+        executarAssercao(
+            'CT-CRUD-02', 
+            'Deve consultar uma aula existente através do ID informado.', 
+            function() {
+                const inserida = adicionarAula("Introdução ao JavaScript", "10min");
+                const buscada = buscarAulaPorId(inserida.id);
+                return buscada !== null && buscada.titulo === "Introdução ao JavaScript";
+            },
+            'expect(buscarAulaPorId(1)).to.not.be.null && expect(aula.titulo).to.equal("Introdução ao JavaScript")'
+        );
+
+        // CT-CRUD-03: Update
+        executarAssercao(
+            'CT-CRUD-03', 
+            'Deve atualizar os dados de título e tempo de uma aula cadastrada.', 
+            function() {
+                const inserida = adicionarAula("Introdução ao JavaScript", "10min");
+                const alterada = atualizarAula(inserida.id, { titulo: "JavaScript Avançado", duracao: "15min" });
+                return alterada !== null && alterada.titulo === "JavaScript Avançado" && listaDeAulas[0].titulo === "JavaScript Avançado";
+            },
+            'expect(aulaAlterada.titulo).to.equal("JavaScript Avançado")'
+        );
+
+        // CT-CRUD-04: Delete
+        executarAssercao(
+            'CT-CRUD-04', 
+            'Deve excluir permanentemente uma aula do sistema utilizando o ID.', 
+            function() {
+                const inserida = adicionarAula("Introdução ao JavaScript", "10min");
+                const foiExcluido = excluirAula(inserida.id);
+                const buscaPos = buscarAulaPorId(inserida.id);
+                return foiExcluido === true && listaDeAulas.length === 0 && buscaPos === null;
+            },
+            'expect(foiExcluido).to.be.true && expect(listaDeAulas.length).to.equal(0)'
+        );
+
+        // --- IMPRESSÃO DO RESUMO NO FOOTER ---
+        document.getElementById('resultado-final').innerHTML = `
+            <span>EXECUÇÃO CONCLUÍDA: ${testesPassaram} de ${totalTestes} testes aprovados.</span>
+            <span>Taxa de Sucesso: ${((testesPassaram/totalTestes)*100)}%</span>
+        `;
+    </script>
+</body>
+</html>
