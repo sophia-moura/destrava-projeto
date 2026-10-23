@@ -14,9 +14,8 @@ DEALLOCATE PREPARE consulta;
 
 -- ===== B3.1: transação com COMMIT (executar uma vez: o e-mail é único) =====
 START TRANSACTION;
-INSERT INTO usuario (primeiro_nome, sobrenome, email, senha, tipo_perfil)
-  VALUES ('Teste','Sucesso','sucesso@exemplo.com','x','ALUNO');
-INSERT INTO aluno (id_usuario, dt_nascimento) VALUES (LAST_INSERT_ID(), '2010-01-01');
+CALL sp_cadastrar_usuario('Teste','Sucesso','sucesso@exemplo.com','SenhaTeste#1','ALUNO', @id_novo);
+INSERT INTO aluno (id_usuario, dt_nascimento) VALUES (@id_novo, '2010-01-01');
 COMMIT;
 SELECT u.id_usuario, u.email, a.dt_nascimento
 FROM usuario u JOIN aluno a ON a.id_usuario = u.id_usuario
@@ -24,14 +23,14 @@ WHERE u.email = 'sucesso@exemplo.com';
 
 -- ===== B3.2: falha provocada e ROLLBACK =====
 START TRANSACTION;
-INSERT INTO usuario (primeiro_nome, sobrenome, email, senha, tipo_perfil)
-  VALUES ('Teste','Falha','falha@exemplo.com','x','ALUNO');
+CALL sp_cadastrar_usuario('Teste','Falha','falha@exemplo.com','SenhaTeste#2','ALUNO', @id_falha);
 INSERT INTO aluno (id_usuario, dt_nascimento) VALUES (1, '2010-01-01');  -- erro 1062 (chave duplicada)
 ROLLBACK;
 SELECT COUNT(*) FROM usuario WHERE email = 'falha@exemplo.com';           -- 0
 
 -- ===== B3.3: concorrência (usar DUAS conexões separadas do Workbench) =====
-SELECT CONNECTION_ID(), @@transaction_isolation;   -- nível de isolamento em vigor
+SELECT CONNECTION_ID();
+SHOW VARIABLES LIKE '%isolation%';   -- nível de isolamento em vigor
 
 -- Conexão 1:
 -- START TRANSACTION;
