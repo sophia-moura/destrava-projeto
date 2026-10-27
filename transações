@@ -1,0 +1,11 @@
+START TRANSACTION;
+
+-- Insere o chamado na tabela 'chamado'
+INSERT INTO chamado (id_usuario, assunto, descricao, status)
+VALUES (1, 'Dúvida na Apresentação', 'Preciso de Ajuda com o módulo B7.', 'ABERTO');
+
+-- Insere a mensagem
+INSERT INTO mensagem_chamado (id_chamado, id_usuario, mensagem)
+VALUES (LAST_INSERT_ID(), 1, 'Olá, estou a testar o sistema para a apresentação.');
+
+COMMIT;
